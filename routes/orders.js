@@ -187,6 +187,10 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
     try{
         let order = new Order(req.body);
+        order.canceled = false;
+        order.completed = false;
+        order.creationDate = Date.now();
+        order.completionDate = null;
         order = await order.save();
         return res.send(order);
     }
