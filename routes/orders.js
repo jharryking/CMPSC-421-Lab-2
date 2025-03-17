@@ -14,13 +14,16 @@ const router = express.Router();
  *                      type: string
  *                      minlength: 5,
  *                      maxlength: 60
+ *                      example: "Product Test"
  *                      description: The product's name
  *                  productPrice:
  *                      type: number
  *                      description: Price of the product
+ *                      example: 1
  *                      min: 0
  *                  productQuantity:
  *                      type: integer
+ *                      example: 1
  *                      min: 1
  *                      description: Quantity of product
  *  
